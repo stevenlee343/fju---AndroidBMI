@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edHeight;
     MyListener listener = new MyListener();
     private Button help;
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
