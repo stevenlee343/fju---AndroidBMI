@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity", bmi + "");
 
         Intent intent = new Intent(this,ResultActivity.class);
-
-        startActivity(intent);
+        intent.putExtra("BMI", bmi);
+            startActivity(intent);
 
 
         /*Toast.makeText(this, getString(R.string.your_bmi_is) + bmi,
@@ -70,5 +70,41 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();*/
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MainActivity", "onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MainActivity", "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("MainActivity", "onDestroy");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MainActivity", "onPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MainActivity", "onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("MainActivity", "onRestart");
     }
 }
