@@ -1,6 +1,7 @@
 package com.tom.bmi;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,7 +50,13 @@ public class MainActivity extends AppCompatActivity {
         float height = Float.parseFloat(h);
         float bmi = weight / (height * height);
         Log.d("MainActivity", bmi + "");
-        Toast.makeText(this, getString(R.string.your_bmi_is) + bmi,
+
+        Intent intent = new Intent(this,ResultActivity.class);
+
+        startActivity(intent);
+
+
+        /*Toast.makeText(this, getString(R.string.your_bmi_is) + bmi,
                 Toast.LENGTH_LONG).show();
         new AlertDialog.Builder(this)
                 .setMessage(getString(R.string.your_bmi_is) + bmi)
@@ -62,6 +69,6 @@ public class MainActivity extends AppCompatActivity {
                         edHeight.setText("");
                     }
                 })
-                .show();
+                .show();*/
     }
 }
